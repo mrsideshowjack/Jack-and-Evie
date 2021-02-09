@@ -47,7 +47,7 @@ query {
   --text-color: #212121;
   --primary-color: #ffcc7e;
   --secondary-color: #355070;
-  --background-color: white;
+  --background-color: #fffafa;
 }
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
@@ -57,6 +57,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  background: var(--background-color);
 }
 
 .layout {

@@ -1,46 +1,76 @@
 <template>
   <Layout>
-    <section class="hero">
-      <h1 class="main-title">
+    <section class="hero-title-container">
+      <h1 class="hero-title">
         Jack & <span>Evie</span>
       </h1>
     </section>
+    <hr class="hero-hr">
+    <h2 class="hero-date">{{ consts.date }}</h2>
   </Layout>
 </template>
 
 <script>
 import anime from 'animejs/lib/anime.es.js';
+import consts from '~/data/consts.json'
 export default {
   metaInfo: {
     title: 'Home'
   },
+  data () {
+    return {
+      consts
+    }
+  },
   created: function () {
   this.$nextTick(function () {
-    anime({
-      targets: '.main-title',
-      opacity: [0,1],
-      duration: 1500,
-      easing: 'linear'
-    });
-    anime({
-      targets: '.main-title',
-      translateY: [-300,0],
-      duration: 600,
-      easing: 'easeOutCubic'
-    });
-    })
+
+    anime.timeline({
+      }).add({
+        targets: '.hero-title',
+        opacity: {
+          value: [0,1],
+          duration: 1300,
+          easing: 'linear',
+        },
+        translateY: {
+          value: [-300,0],
+          duration: 600,
+          easing: 'easeOutCubic'
+        }
+      }).add({
+        targets: '.hero-hr',
+        translateX: {
+          value: [300,0],
+          duration: 200,
+          easing: 'easeOutCubic'
+        },
+        opacity: {
+          value: [0,1],
+          duration: 300,
+          easing: 'linear',
+        },
+      }, '-=50').add({
+        targets: '.hero-date',
+        opacity: {
+          value: [0,1],
+          duration: 300,
+          easing: 'linear',
+        },
+      })
+  })
   }
 }
 </script>
 
 <style>
-.hero{
-    height: 80vh;
+.hero-title-container{
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.hero .main-title{
+.hero-title-container .hero-title{
   font-family: 'Playfair Display', serif;
   font-size: 25vmin;
   font-weight: 400;
@@ -52,12 +82,18 @@ export default {
   user-select: none;
 }
 
-.main-title > span{
+.hero-title-container .hero-title > span{
   flex: 1;
   flex-grow: 1;
   text-align: right;
 }
-.home-links a {
-  margin-right: 1rem;
+
+.hero-hr{
+  max-width: 300px;
+  border: 1px solid var(--text-color);
+}
+
+.hero-date  {
+  text-align: center;
 }
 </style>

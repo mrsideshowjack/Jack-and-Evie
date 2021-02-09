@@ -22,7 +22,7 @@ module.exports = {
             manifestPath: 'manifest.json',
             title: 'Jack & Evie',
             startUrl: '/',
-            display: 'minimal-ui',
+            display: 'standalone',
             statusBarStyle: 'default',
             themeColor: '#ffffff',
             backgroundColor: '#ffffff',
