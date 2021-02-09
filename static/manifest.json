@@ -1,0 +1,52 @@
+{
+    "background_color": "#ffffff",
+    "display": "minimal-ui",
+    "icons": [
+        {
+            "sizes": "72x72",
+            "src": "icons/icon-72.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "96x96",
+            "src": "icons/icon-96.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "128x128",
+            "src": "icons/icon-128.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "144x144",
+            "src": "icons/icon-144.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "152x152",
+            "src": "icons/icon-152.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "192x192",
+            "src": "icons/icon-192.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "384x384",
+            "src": "icons/icon-384.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "512x512",
+            "src": "icons/icon-512.png",
+            "type": "image/png"
+        }
+    ],
+    "name": "Jack & Evie wedding",
+    "scope": "/",
+    "short_name": "Jack & Evie",
+    "splash_pages": null,
+    "start_url": "/",
+    "theme_color": "#ffffff"
+}
