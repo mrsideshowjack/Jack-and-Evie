@@ -1,29 +1,53 @@
 <template>
   <Layout>
-
-    <h1 class="main-title">Jack & <span>Evie</span></h1>
-
+    <section class="hero">
+      <h1 class="main-title">Jack & <span>Evie</span></h1>
+    </section>
   </Layout>
 </template>
 
 <script>
+import anime from 'animejs/lib/anime.es.js';
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
+  // metaInfo: {
+  //   title: 'Hello, world!'
+  // },
+  mounted: function () {
+  this.$nextTick(function () {
+    anime({
+      targets: '.main-title',
+      opacity: [0,1],
+      duration: 800,
+      easing: 'linear'
+    });
+    anime({
+      targets: '.main-title',
+      translateY: [-100,0],
+      duration: 400,
+      easing: 'easeInOutQuad'
+    });
+    })
   }
 }
 </script>
 
 <style>
-.main-title{
+.hero{
+  max-width: 1200px;
+  margin: 0rem auto;
+}
+.hero .main-title{
   font-family: 'Playfair Display', serif;
-  font-size: 300px;
+  font-size: 20vw;
   font-weight: 400;
-  margin: 1rem 0px;
+  margin: 0rem auto;
+  max-width: 80vw;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  user-select: none;
 }
+
 .main-title > span{
   flex: 1;
   flex-grow: 1;

@@ -2,8 +2,35 @@
 <html ${htmlAttrs}>
   <head>
     ${head}
+    <meta name="Description" content="Jack Mason's personal site.">
+    <!-- Social media meta tags -->
+    <meta property="og:title" content="Jack Mason Dev">
+    <meta property="og:description" content="Jack Mason's personal site.">
+    <meta property="og:image" content="https://jack-mason.dev/images/jack-mason-dev.jpg">
+    <meta property="og:url" content="https://jack-mason.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Jack Mason Dev">
+    <meta name="twitter:image:alt" content="Jack Mason Dev personal website.">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#fffff">
+    <meta name="theme-color" content="#fffff">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lateef&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFYPQ7W8B3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JFYPQ7W8B3');
+    </script>
   </head>
   <body ${bodyAttrs}>
     ${app}

@@ -1,7 +1,27 @@
 <template>
   <Layout>
     <h1>RSVP</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <p>If you received an invitation, please respond using the following form.</p>
+    <form name="contact" netlify>
+      <p>
+        <label>Name <input type="text" name="name" required/></label>
+      </p>
+      <p>
+        <label>Email <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <input type="radio" id="yes" name="RSVP" value="yes">
+        <label for="yes">I will attend</label><br>
+        <input type="radio" id="no" name="RSVP" value="no">
+        <label for="no">I will not attend</label><br>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   </Layout>
 </template>
 
