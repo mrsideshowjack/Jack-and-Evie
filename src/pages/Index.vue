@@ -19,14 +19,14 @@ export default {
     anime({
       targets: '.main-title',
       opacity: [0,1],
-      duration: 800,
+      duration: 1500,
       easing: 'linear'
     });
     anime({
       targets: '.main-title',
-      translateY: [-100,0],
-      duration: 400,
-      easing: 'easeInOutQuad'
+      translateY: [-300,0],
+      duration: 600,
+      easing: 'easeOutCubic'
     });
     })
   }

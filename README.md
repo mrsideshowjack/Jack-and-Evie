@@ -1,14 +1,27 @@
-# Default starter for Gridsome
+# Jack & Evie wedding
 
-This is the project you get when you run `gridsome create new-project`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4ee5540-a218-49d6-bcc1-87e20ba196a7/deploy-status)](https://app.netlify.com/sites/affectionate-shaw-368894/deploys)
 
-### 1. Install Gridsome CLI tool if you don't have
+Wedding site build on [gridsome](https://gridsome.org/)
 
+## Developing
+
+### Requirements
+
+Install Gridsome CLI tool if you don't have already
 `npm install --global @gridsome/cli`
 
-### 2. Create a Gridsome project
+Install packages
+`yarn`
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### dev
+
+`gridsome develop` to start a local dev server at `http://localhost:8080`
+
+### build
+
+`gridsome build` to build for production
+
+### deploy
+
+Push to the `main` branch of this repo, and netlify will build+deploy
