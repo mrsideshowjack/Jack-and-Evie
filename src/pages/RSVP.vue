@@ -3,7 +3,7 @@
     <h1>RSVP</h1>
     <p>If you received an invitation, please respond using the following form.</p>
     <form
-      name="contact"
+      name="RSVP"
       netlify
     >
       <p>

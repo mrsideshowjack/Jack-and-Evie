@@ -19,23 +19,14 @@
         </g-link>
       </strong>
       <nav class="nav">
-        <g-link
-          class="nav__link"
-          to="/RSVP/"
-        >
+        <g-link class="nav__link" to="/RSVP/">
           RSVP
         </g-link>
-        <g-link
-          class="nav__link"
-          to="/Info/"
-        >
-          Info
-        </g-link>
-        <g-link
-          class="nav__link"
-          to="/Photos/"
-        >
+        <g-link class="nav__link" to="/Photos/">
           Photos
+        </g-link>
+        <g-link class="nav__link" to="/Info/">
+          Info
         </g-link>
       </nav>
     </header>
@@ -69,6 +60,7 @@ body {
 }
 
 .layout {
+  height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 20px;

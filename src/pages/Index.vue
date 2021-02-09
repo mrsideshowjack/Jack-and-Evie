@@ -11,10 +11,10 @@
 <script>
 import anime from 'animejs/lib/anime.es.js';
 export default {
-  // metaInfo: {
-  //   title: 'Hello, world!'
-  // },
-  mounted: function () {
+  metaInfo: {
+    title: 'Home'
+  },
+  created: function () {
   this.$nextTick(function () {
     anime({
       targets: '.main-title',
@@ -35,12 +35,14 @@ export default {
 
 <style>
 .hero{
-  max-width: 1200px;
-  margin: 0rem auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .hero .main-title{
   font-family: 'Playfair Display', serif;
-  font-size: 20vw;
+  font-size: 25vmin;
   font-weight: 400;
   margin: 0rem auto;
   max-width: 80vw;
