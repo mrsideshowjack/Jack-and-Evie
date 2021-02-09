@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <section class="hero">
-      <h1 class="main-title">Jack & <span>Evie</span></h1>
+      <h1 class="main-title">
+        Jack & <span>Evie</span>
+      </h1>
     </section>
   </Layout>
 </template>

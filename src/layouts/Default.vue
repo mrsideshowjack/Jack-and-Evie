@@ -19,9 +19,24 @@
         </g-link>
       </strong>
       <nav class="nav">
-        <g-link class="nav__link" to="/RSVP/">RSVP</g-link>
-        <g-link class="nav__link" to="/Info/">Info</g-link>
-        <g-link class="nav__link" to="/Photos/">Photos</g-link>
+        <g-link
+          class="nav__link"
+          to="/RSVP/"
+        >
+          RSVP
+        </g-link>
+        <g-link
+          class="nav__link"
+          to="/Info/"
+        >
+          Info
+        </g-link>
+        <g-link
+          class="nav__link"
+          to="/Photos/"
+        >
+          Photos
+        </g-link>
       </nav>
     </header>
     <slot />
