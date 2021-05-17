@@ -74,11 +74,12 @@
             <label
               for="name"
               class="label"
-            >Your name</label>
+            >Your name*</label>
             <input
               v-model="formData.name"
               type="text"
               name="name"
+              required
             >
           </div>
           <div>
@@ -89,16 +90,71 @@
               name="email"
             >
           </div>
+          <div>
+            <p>RSVP*</p>
+            <input
+              id="yes"
+              v-model="formData.RSVP_TRUE"
+              type="radio"
+              name="RSVP"
+            >
+            <label for="yes">I will attend</label><br>
+            <input
+              id="no"
+              v-model="formData.RSVP_FALSE"
+              type="radio"
+              name="RSVP"
+            >
+            <label for="no">I will not attend</label><br>
+          </div>
+          <div>
+            <input
+              id="plus1"
+              v-model="formData.plus1"
+              type="checkbox"
+              name="plus1"
+            >
+            <label for="plus1"> I will be bringing a +1?</label><br>
+          </div>
+          <div v-if="formData.plus1">
+            <label
+              for="plus1name"
+              class="label"
+            >If so, please tell us who</label>
+            <input
+              v-model="formData.plus1name"
+              type="text"
+              name="plus1name"
+            >
+          </div>
+          <div>
+            <input
+              id="veggie"
+              v-model="formData.veggie"
+              type="checkbox"
+              name="veggie"
+            >
+            <label for="veggie"> <span v-if="!formData.plus1">I</span><span v-else>One of us</span> will be having the veggie option.</label><br>
+          </div>
+          <div>
+            <label
+              for="song"
+              class="label"
+            >Request a song</label>
+            <input
+              v-model="formData.song"
+              type="text"
+              name="song"
+            >
+          </div>
+          <div>
+            <label for="message">Include a message</label>
+            <textarea
+              v-model="formData.message"
+              name="message"
+            />
+          </div>
         </div>
-
-        <div class="message-wrapper">
-          <label for="message">Message</label>
-          <textarea
-            v-model="formData.message"
-            name="message"
-          />
-        </div>
-
         <button type="submit">
           Submit form
         </button>
