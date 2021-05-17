@@ -8,7 +8,14 @@
     <p>The venue for the whole event is <a href="http://www.tithe-barn.co.uk/">The Tithe Barn.</a> Located near Petersfield, The Tithe Barn is a unique wedding and reception venue, set in the heart of the South Downs National Park.</p>
     <h2>Getting There</h2>
     <p>The Tithe Barn <br> Old Ditcham Farm, Ditcham,<br> Petersfield GU31 5RQ</p>
-    <iframe width="600" height="600" frameborder="0" style="border:0" :src='mapsUrl' allowfullscreen></iframe>
+    <div class="map-container">
+      <iframe
+        class="map"
+        frameborder="0"
+        :src="mapsUrl"
+        allowfullscreen
+      />
+    </div>
   </Layout>
 </template>
 
@@ -26,3 +33,11 @@ export default {
   },
 }
 </script>
+<style scoped>
+.map{
+  width: calc(100% - 2rem); 
+  height:100%;
+  border: 1rem double var(--text-color);
+  min-height: 400px;
+}
+</style>

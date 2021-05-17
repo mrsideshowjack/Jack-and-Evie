@@ -5,8 +5,16 @@
         Jack & <span>Evie</span>
       </h1>
     </section>
+    <g-link
+      class="btn hero-btn"
+      to="/RSVP/"
+    >
+      RSVP
+    </g-link>
     <hr class="hero-hr">
-    <h2 class="hero-date">{{ consts.date }}</h2>
+    <h2 class="hero-date">
+      {{ consts.date }}
+    </h2>
   </Layout>
 </template>
 
@@ -57,6 +65,18 @@ export default {
           duration: 300,
           easing: 'linear',
         },
+      }, '-=50').add({
+        targets: '.hero-btn',
+        translateY: {
+          value: [100,0],
+          duration: 200,
+          easing: 'easeOutCubic'
+        },
+        opacity: {
+          value: [0,1],
+          duration: 300,
+          easing: 'linear',
+        },
       })
   })
   }
@@ -65,7 +85,7 @@ export default {
 
 <style>
 .hero-title-container{
-    height: 75vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,12 +108,30 @@ export default {
   text-align: right;
 }
 
+.hero-btn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 4rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0rem;
+    max-width: 100vw;
+    border: none;
+    border-top: 1rem double;
+}
+
 .hero-hr{
   max-width: 300px;
   border: 1px solid var(--text-color);
 }
 
 .hero-date  {
-  text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
 }
 </style>

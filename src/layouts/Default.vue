@@ -54,9 +54,8 @@ query {
 <style>
 :root {
   --text-color: #212121;
-  --primary-color: #ffcc7e;
-  --secondary-color: #355070;
-  --background-color: #fffafa;
+  --link-color: #355070;
+  --background-color: #fff;
 }
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
@@ -67,6 +66,7 @@ body {
   padding: 0;
   line-height: 1.5;
   background: var(--background-color);
+  font-size: 1.2rem;
 }
 
 .layout {
@@ -108,6 +108,45 @@ body {
 }
 .header a:hover {
   text-decoration: underline;
-  color: var(--secondary-color);
+  color: var(--link-color);
+}
+
+/* site wide */
+.btn{
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: 0.16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: top;
+    flex-shrink: 0;
+    min-height: 3rem;
+    border-radius: 0;
+    text-align: left;
+    text-decoration: none;
+    transition: all 200ms cubic-bezier(0, 0, 0.38, 0.9);
+    outline: none;
+    position: relative;
+    max-width: 20rem;
+    margin: 0;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text-color);
+    color: var(--text-color);
+    min-height: 2rem;
+    padding: calc(0.375rem - 3px) 60px calc(0.375rem - 3px) 12px;
+}
+.btn:hover,
+.btn:focus{
+  color: white;
+  background: var(--text-color);
+}
+.btn:focus{
+    border-width: 0.1875rem;
+    border-color: var(--text-color);
+    box-shadow: inset 0 0 0 1px #ffffff;
 }
 </style>
