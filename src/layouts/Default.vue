@@ -91,13 +91,13 @@ body {
   transform: rotate(45deg);
 }
 
-a,
-a:visited {
+.header a,
+.header a:visited {
   margin-left: 20px;
   color: var(--text-color);
   text-decoration: none;
 }
-a:hover {
+.header a:hover {
   text-decoration: underline;
   color: var(--secondary-color);
 }
