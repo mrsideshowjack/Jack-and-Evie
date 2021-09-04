@@ -2,7 +2,8 @@
   <Layout>
     <h1>Info</h1>
     <h2>Date & Times</h2>
-    <p>{{ consts.date }}</p>
+    <p>The date of the wedding is {{ consts.date }}</p>
+    <p>The ceremony will begin at 3pm so please plan accordingly.</p>
 
     <h2>The Venue</h2>
     <p>The venue for the whole event is <a href="http://www.tithe-barn.co.uk/">The Tithe Barn.</a> Located near Petersfield, The Tithe Barn is a unique wedding and reception venue, set in the heart of the South Downs National Park.</p>
